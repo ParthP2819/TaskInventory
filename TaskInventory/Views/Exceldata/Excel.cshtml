@@ -1,0 +1,46 @@
+﻿@model IEnumerable<OutputData>
+@{
+    ViewData["Title"] = "Excel";
+}
+<h1 class="text-center">Excel Data</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Date</td>
+            <td>ProductCode</td>
+            @* <td>EventType</td>
+            <td>Quantity</td>
+            <td>PricePerQuantity</td>*@
+            <td>PurchaseQty</td>
+            <td>PurchasePrice</td>
+            <td>TotalPurchaseAmount</td>
+            <td>SaleQty</td>
+            <td>SalePrice</td>
+            <td>TotalSaleAmount</td>
+            <td>ProfitLoss</td>
+            <td>ClosingQty</td>
+            <td>OpeningStock</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.Date</td>
+                <td>@data.ProductCode</td>
+                @* <td>@data.EventType</td>
+            <td>@data.Quantity</td>
+            <td>@data.PricePerQuantity</td>*@
+                <td>@data.PurchaseQty</td>
+                <td>@data.PurchasePrice</td>
+                <td>@data.TotalPurchaseAmount</td>
+                <td>@data.SaleQty</td>
+                <td>@data.SalePrice</td>
+                <td>@data.TotalSaleAmount</td>
+                <td>@data.ProfitLoss</td>
+                <td>@data.ClosingQty</td>
+                <td>@data.OpeningStock</td>
+            </tr>
+        }
+    </tbody>
+</table>
